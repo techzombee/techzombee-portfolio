@@ -1,0 +1,32 @@
+# 📦 Node.js dependencies (installed via npm/yarn)
+node_modules/
+
+# ⚙️ Next.js build output and static export folder
+.next/
+out/
+
+# 🔐 Environment variable files (contain secrets like API keys)
+.env
+.env.local
+
+# 🧱 Supabase local config (created by Supabase CLI)
+.supabase/
+
+# 🍎 macOS system files (not needed in source control)
+.DS_Store
+
+# 🧑‍💻 VS Code editor settings (user-specific)
+.vscode/
+
+# 🏗️ Build, cache, and compiled output directories
+dist/
+build/
+.cache/
+
+# 📜 Log files (from Node, npm, Supabase, etc.)
+logs/
+*.log
+
+# 🗑️ Temporary & swap files (created by editors or OS)
+*.tmp
+*.swp
