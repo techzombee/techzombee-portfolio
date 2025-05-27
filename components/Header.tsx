@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { supabase } from '@/lib/supabase'
 import { useEffect, useState } from 'react'
 import TabNav from './TabNav'
+import ProGate from './ProGate'
 
 export default function Header() {
   const router = useRouter()
@@ -34,20 +35,26 @@ export default function Header() {
       </nav>
 
       {/* 우측: 로그인 상태에 따라 버튼 */}
-      <div>
+      <div className="flex items-center space-x-4">
+        {user?.user_metadata?.is_pro ? (
+          <span className="text-sm text-green-600 font-semibold">PRO</span>
+        ) : (
+          <ProGate />
+        )}
+
         {user ? (
           <button
             onClick={handleLogout}
             className="text-sm text-gray-600 hover:text-black"
           >
-            로그아웃
+            Log out
           </button>
         ) : (
           <Link
             href="/signin"
             className="text-sm text-blue-600 hover:underline"
           >
-            로그인
+            Sign In
           </Link>
         )}
       </div>

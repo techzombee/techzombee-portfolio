@@ -29,7 +29,7 @@ export default function Home() {
             onClick={handleLogout}
             className="bg-red-600 text-white px-4 py-2 rounded"
         >
-            로그아웃
+            Log out
         </button>
         </main>
     </AuthGuard>
