@@ -65,12 +65,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       payment_method_types: ['card'],
       line_items: [
         {
-          price: 'price_1RTAp1EAH6kUKFIDbxqE5vzy', // Stripe Price ID
+          price: process.env.STRIPE_PRICE_ID!, // Stripe Price ID
           quantity: 1,
         },
       ],
-      success_url: `${req.headers.origin}/stripe-success`,
-      cancel_url: `${req.headers.origin}/stripe-cancel`,
+      success_url: `${process.env.NEXT_PUBLIC_APP_URL}/stripe-success`,
+      cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/stripe-cancel`,
       customer_email: user.email,
       metadata: {
         user_id: user.id, // ✅ Webhook에서 유저 식별용
