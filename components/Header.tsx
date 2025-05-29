@@ -26,7 +26,7 @@ export default function Header() {
     <header className="flex items-center justify-between px-6 py-4 border-b">
       {/* 좌측: 로고 / 서비스명 */}
       <div className="text-xl font-bold">
-        <Link href="/">MVP Starter Kit</Link>
+        <Link href="/">techzombee</Link>
       </div>
 
       {/* 중앙: 탭 */}
