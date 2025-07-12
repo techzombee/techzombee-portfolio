@@ -1,5 +1,5 @@
 {
-  "name": "mvp-starter-kit",
+  "name": "techzombee-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/techzombee/mvp-starter-kit.git"
+    "url": "git+https://github.com/techzombee/techzombee-portfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/techzombee/mvp-starter-kit/issues"
+    "url": "https://github.com/techzombee/techzombee-portfolio/issues"
   },
-  "homepage": "https://github.com/techzombee/mvp-starter-kit#readme",
+  "homepage": "https://github.com/techzombee/techzombee-portfolio#readme",
   "dependencies": {
     "@supabase/supabase-js": "^2.49.5",
     "clsx": "^2.1.1",
