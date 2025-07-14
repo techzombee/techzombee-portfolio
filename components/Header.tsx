@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { supabase } from '@/lib/supabase'
 import { useEffect, useState } from 'react'
 import TabNav from './TabNav'
-import ProGate from './ProGate'
 
 export default function Header() {
   const router = useRouter()
@@ -33,12 +32,6 @@ export default function Header() {
       </nav>
 
       <div className="flex items-center space-x-4">
-        {user?.user_metadata?.is_pro ? (
-          <span className="text-sm text-green-600 font-semibold">PRO</span>
-        ) : (
-          <ProGate />
-        )}
-
         {user ? (
           <button
             onClick={handleLogout}
