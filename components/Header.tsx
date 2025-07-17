@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import TabNav from './TabNav'
 
 export default function Header() {
   return (
@@ -7,10 +6,6 @@ export default function Header() {
       <div className="text-xl font-bold">
         <Link href="/">techzombee</Link>
       </div>
-
-      <nav className="flex-1 flex justify-center">
-        <TabNav />
-      </nav>
     </header>
   )
 }

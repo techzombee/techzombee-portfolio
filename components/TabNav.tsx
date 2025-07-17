@@ -1,3 +1,7 @@
+// components/TabNav.tsx
+
+// NOTE: This component is currently not in use.
+
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import clsx from 'clsx'
