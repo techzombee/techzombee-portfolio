@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
 import AuthGuard from '../components/AuthGuard'
-import SnsIcons from '@/components/snsIcons'
+import SnsIcons from '@/components/SnsIcons'
 
 export default function Home() {
   const router = useRouter()
