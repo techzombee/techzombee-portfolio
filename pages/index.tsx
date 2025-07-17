@@ -1,44 +1,18 @@
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
-import { supabase } from '../lib/supabase'
-import AuthGuard from '../components/AuthGuard'
 import SnsIcons from '@/components/SnsIcons'
 
 export default function Home() {
-  const router = useRouter()
-  const [userEmail, setUserEmail] = useState<string | null>(null)
-
-  //check Login
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-        setUserEmail(session?.user?.email ?? null)
-    })
-  }, [])
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut()
-    router.push('/signin')
-  }
-
   return (
     <>
-      <div className="flex justify-center mt-4">
+      <div className="flex justify-center mb-6">
         <SnsIcons />
       </div>
-      <AuthGuard>
-          <main className="min-h-screen flex flex-col items-center justify-center p-4">
-            
-            <h1 className="text-2xl font-bold text-green-600 mb-4">
-                Welcome{userEmail ? `, ${userEmail}` : ''}!
-            </h1>
-            <button
-                onClick={handleLogout}
-                className="bg-red-600 text-white px-4 py-2 rounded"
-            >
-                Log out
-            </button>
-          </main>
-      </AuthGuard>
+
+      <section className="flex flex-col items-center justify-center">
+        <h1 className="text-2xl font-bold text-black-600 mt-20">
+          Welcome!
+        </h1>
+      </section>
     </>
+    
   )
 }

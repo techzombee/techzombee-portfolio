@@ -1,5 +1,7 @@
 // components/AuthGuard.tsx
 
+// NOTE: This component is currently not in use.
+
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { supabase } from '../lib/supabase'

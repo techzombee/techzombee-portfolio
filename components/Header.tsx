@@ -1,26 +1,7 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { supabase } from '@/lib/supabase'
-import { useEffect, useState } from 'react'
 import TabNav from './TabNav'
 
 export default function Header() {
-  const router = useRouter()
-  const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    const getUser = async () => {
-      const { data } = await supabase.auth.getUser()
-      setUser(data.user)
-    }
-    getUser()
-  }, [])
-
-  const handleLogout = async () => {
-    await supabase.auth.signOut()
-    router.push('/signin')
-  }
-
   return (
     <header className="flex items-center justify-between px-6 py-4 border-b">
       <div className="text-xl font-bold">
@@ -30,24 +11,6 @@ export default function Header() {
       <nav className="flex-1 flex justify-center">
         <TabNav />
       </nav>
-
-      <div className="flex items-center space-x-4">
-        {user ? (
-          <button
-            onClick={handleLogout}
-            className="text-sm text-gray-600 hover:text-black"
-          >
-            Log out
-          </button>
-        ) : (
-          <Link
-            href="/signin"
-            className="text-sm text-blue-600 hover:underline"
-          >
-            Sign In
-          </Link>
-        )}
-      </div>
     </header>
   )
 }

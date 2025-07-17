@@ -1,5 +1,7 @@
 // pages/signin.tsx
 
+// NOTE: This file is currently not in use.
+
 import { useState } from 'react'
 import { supabase } from '../lib/supabase'
 import { useRouter } from 'next/router'
