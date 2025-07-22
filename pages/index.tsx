@@ -1,4 +1,4 @@
-import SnsIcons from '@/components/SnsIcons'
+import SnsIcons from '@/components/nav/SnsIcons'
 
 export default function Home() {
   return (
