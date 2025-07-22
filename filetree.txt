@@ -1,0 +1,63 @@
+.
+├── components
+│   ├── content
+│   │   ├── AuthGuard.tsx
+│   │   ├── Footer.tsx
+│   │   └── Header.tsx
+│   ├── layout
+│   │   ├── Layout.tsx
+│   │   └── PageWithScrollSpyLayout.tsx
+│   ├── nav
+│   │   ├── ScrollSpyNav.tsx
+│   │   ├── SnsIcons.tsx
+│   │   └── TabNav.tsx
+│   └── sections
+│       ├── AboutSection.tsx
+│       ├── ExperienceSection.tsx
+│       └── ProjectsSection.tsx
+├── constants
+│   └── sections.ts
+├── context
+├── filetree.txt
+├── hooks
+│   └── useScrollSpy.ts
+├── lib
+│   └── supabase.ts
+├── next-env.d.ts
+├── package-lock.json
+├── package.json
+├── pages
+│   ├── _app.tsx
+│   ├── dashboard.tsx
+│   ├── index.tsx
+│   ├── logs.tsx
+│   ├── privacy-policy.tsx
+│   ├── refund-policy.tsx
+│   ├── signin.tsx
+│   └── terms-of-service.tsx
+├── postcss.config.js
+├── public
+│   ├── icons-sns
+│   │   ├── github-black.png
+│   │   ├── github-black.svg
+│   │   ├── github-white.png
+│   │   ├── github-white.svg
+│   │   ├── instagram-black.jpg
+│   │   ├── instagram-black.svg
+│   │   ├── instagram-white.png
+│   │   ├── instagram-white.svg
+│   │   ├── linkedin-black.png
+│   │   ├── linkedin-white.png
+│   │   ├── x-black.png
+│   │   ├── x-white.png
+│   │   └── x.svg
+│   ├── robots.txt
+│   └── sitemap.xml
+├── README.md
+├── styles
+│   └── globals.css
+├── tailwind.config.js
+├── tsconfig.json
+└── types
+
+15 directories, 46 files
