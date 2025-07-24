@@ -2,7 +2,7 @@ import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { sectionList } from "@/constants/sections";
 
 export default function ScrollSpyNav() {
-    const activeId = useScrollSpy(sectionList.map((s) => s.id), 80)
+    const activeId = useScrollSpy(sectionList.map((s) => s.id), 96)
 
     return (
         <nav className="sticky top-24">

@@ -1,18 +1,18 @@
 import SnsIcons from '@/components/nav/SnsIcons'
+import PageWithScrollSpyLayout from '@/components/layout/PageWithScrollSpyLayout'
+import AboutSection from '@/components/sections/AboutSection'
+import ExperienceSection from '@/components/sections/ExperienceSection'
+import ProjectsSection from '@/components/sections/ProjectsSection'
 
 export default function Home() {
   return (
-    <>
+    <PageWithScrollSpyLayout>
       <div className="flex justify-center mb-6">
         <SnsIcons />
       </div>
-
-      <section className="flex flex-col items-center justify-center">
-        <h1 className="text-2xl font-bold text-black-600 mt-20">
-          Welcome!
-        </h1>
-      </section>
-    </>
-    
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectsSection />
+    </PageWithScrollSpyLayout>    
   )
 }

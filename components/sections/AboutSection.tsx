@@ -4,6 +4,36 @@ export default function AboutSection() {
             <h2 className="text-xl font-bold mb-2">About</h2>
             <p>
                 Hello, I'm Damon Cho.
+
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
             </p>
         </section>
     )

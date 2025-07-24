@@ -4,6 +4,44 @@ export default function ProjectsSection() {
             <h2 className="text-xl font-bold mb-2">Projects</h2>
             <p>
                 Projects what I did
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
+                .<br />
             </p>
         </section>
     )
