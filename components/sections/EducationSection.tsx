@@ -10,6 +10,10 @@ const education = [
     {
         period: 'Mar 2019 — Feb 2021',
         degree: "M.S. in Information and Communication Technology (Top of Class) · Ajou University",
+        thesis: {
+            title: "Strength Training Intensity Measurement System Based on Skin Temperature — Smart Sportswear & Machine Learning",
+            url: "https://dcoll.ajou.ac.kr/dcollection/srch/srchDetail/000000030731",
+        },
         location: 'Suwon, South Korea',
         images: ['/education/transcript_ajou.png'],
     },
@@ -31,6 +35,19 @@ export default function EducationSection() {
                         <span className="text-gray-400 pt-0.5 whitespace-nowrap">{item.period}</span>
                         <div>
                             <p>{item.degree}</p>
+                            {item.thesis && (
+                                <p className="text-xs">
+                                    <a
+                                        href={item.thesis.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="hover:underline"
+                                    >
+                                        {item.thesis.title}{' '}
+                                        <sup className="text-gray-400">↗</sup>
+                                    </a>
+                                </p>
+                            )}
                             <p className="text-gray-400">{item.location}</p>
                             <ImageGallery images={item.images} />
                         </div>
