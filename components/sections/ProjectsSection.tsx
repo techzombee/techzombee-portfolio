@@ -10,7 +10,7 @@ export default function ProjectsSection() {
             <h2 className="text-sm font-semibold mb-4">Side Projects</h2>
             <div className="space-y-3">
                 {projects.map((item) => (
-                    <div key={item.title} className="grid grid-cols-[120px_1fr] gap-x-4 text-sm">
+                    <div key={item.title} className="grid grid-cols gap-x-4 text-sm">
                         <span className="text-gray-400">{item.year}</span>
                         <a
                             href={item.href}

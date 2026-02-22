@@ -7,7 +7,7 @@ export default function PageWithScrollSpyLayout({ children }: { children: React.
                 <ScrollSpyNav />
             </aside>
 
-            <main className="flex-grow p-6">{children}</main>
+            <main className="flex-grow min-w-0 p-6">{children}</main>
         </div>
     )
 }

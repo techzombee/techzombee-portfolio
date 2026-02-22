@@ -51,7 +51,7 @@ export default function ExperienceSection() {
             <h2 className="text-sm font-semibold mb-4">Work Experience</h2>
             <div className="space-y-6">
                 {experiences.map((item, i) => (
-                    <div key={i} className="grid grid-cols-[160px_1fr] gap-x-4 text-sm">
+                    <div key={i} className="grid grid-cols gap-x-4 text-sm">
                         <span className="text-gray-400 pt-0.5 whitespace-nowrap">{item.period}</span>
                         <div>
                             <a
@@ -65,7 +65,7 @@ export default function ExperienceSection() {
                             </a>
                             <p className="text-gray-400">{item.location}</p>
                             {item.images.length > 0 && (
-                                <div className="flex gap-2 mt-3 overflow-x-auto">
+                                <div className="flex gap-2 mt-3">
                                     {item.images.map((src, j) => (
                                         <button
                                             key={j}
