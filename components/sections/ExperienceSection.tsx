@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import ImageGallery from '@/components/ui/ImageGallery'
 
 const experiences = [
     {
@@ -36,16 +36,6 @@ const experiences = [
 ]
 
 export default function ExperienceSection() {
-    const [lightbox, setLightbox] = useState<string | null>(null)
-
-    useEffect(() => {
-        const handleKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') setLightbox(null)
-        }
-        window.addEventListener('keydown', handleKey)
-        return () => window.removeEventListener('keydown', handleKey)
-    }, [])
-
     return (
         <section id="experience" className="scroll-mt-24 mb-10">
             <h2 className="text-sm font-semibold mb-4">Work Experience</h2>
@@ -64,41 +54,11 @@ export default function ExperienceSection() {
                                 <sup className="text-gray-400">↗</sup>
                             </a>
                             <p className="text-gray-400">{item.location}</p>
-                            {item.images.length > 0 && (
-                                <div className="flex gap-2 mt-3">
-                                    {item.images.map((src, j) => (
-                                        <button
-                                            key={j}
-                                            onClick={() => setLightbox(src)}
-                                            className="w-24 h-16 rounded bg-gray-200 flex-shrink-0 overflow-hidden hover:opacity-80 transition-opacity cursor-zoom-in"
-                                        >
-                                            <img
-                                                src={src}
-                                                alt=""
-                                                className="w-full h-full object-cover"
-                                            />
-                                        </button>
-                                    ))}
-                                </div>
-                            )}
+                            <ImageGallery images={item.images} />
                         </div>
                     </div>
                 ))}
             </div>
-
-            {lightbox && (
-                <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-                    onClick={() => setLightbox(null)}
-                >
-                    <img
-                        src={lightbox}
-                        alt=""
-                        className="max-w-[90vw] max-h-[90vh] object-contain rounded shadow-xl"
-                        onClick={(e) => e.stopPropagation()}
-                    />
-                </div>
-            )}
         </section>
     )
 }

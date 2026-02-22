@@ -1,18 +1,23 @@
+import ImageGallery from '@/components/ui/ImageGallery'
+
 const education = [
     {
         period: 'Sep 2023 — Aug 2025',
         degree: "B.S. in Computer Science · Korea National Open University",
         location: 'Seoul, South Korea',
+        images: [],
     },
     {
         period: 'Mar 2019 — Feb 2021',
         degree: "M.S. in Information and Communication Technology (Top of Class) · Ajou University",
         location: 'Suwon, South Korea',
+        images: ['/education/transcript_ajou.png'],
     },
     {
         period: 'Feb 2013 — Feb 2018',
         degree: 'B.S. in Business Administration · Academic Credit Bank System',
         location: 'Seoul, South Korea',
+        images: [],
     },
 ]
 
@@ -27,6 +32,7 @@ export default function EducationSection() {
                         <div>
                             <p>{item.degree}</p>
                             <p className="text-gray-400">{item.location}</p>
+                            <ImageGallery images={item.images} />
                         </div>
                     </div>
                 ))}
