@@ -1,7 +1,7 @@
 const bullets = [
-    'iOS Engineer',
-    'Full-Stack background',
-    'Production banking experience',
+    'Software Engineer (iOS & Full-Stack)',
+    'Production banking systems experience',
+    'System design & scalable backend development',
     'AI automation builder',
 ]
 
@@ -11,7 +11,7 @@ export default function AboutSection() {
             <h2 className="text-sm font-semibold mb-4">About</h2>
             <ul className="space-y-1 text-sm text-gray-700">
                 {bullets.map((item) => (
-                    <li key={item}>- {item}</li>
+                    <li key={item}>• {item}</li>
                 ))}
             </ul>
         </section>

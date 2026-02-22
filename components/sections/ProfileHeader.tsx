@@ -3,7 +3,7 @@ import SnsIcons from '@/components/nav/SnsIcons'
 export default function ProfileHeader() {
     return (
         <div className="mb-10">
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
                 <div className="w-40 h-40 rounded-full bg-gray-200 overflow-hidden flex-shrink-0">
                     <img
                         src="/profile.jpg"
@@ -12,8 +12,8 @@ export default function ProfileHeader() {
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                     />
                 </div>
-                <div>
-                    <h1 className="text-sm font-semibold">Heechan Cho (Damon)</h1>
+                <div className="flex flex-col gap-2">
+                    <h1 className="text-base font-semibold">Heechan Cho (Damon)</h1>
                     <p className="text-sm text-gray-500">Seoul, South Korea</p>
                     <div className="mt-2">
                         <SnsIcons />

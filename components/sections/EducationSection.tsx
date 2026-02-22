@@ -22,8 +22,8 @@ export default function EducationSection() {
             <h2 className="text-sm font-semibold mb-4">Education</h2>
             <div className="space-y-4">
                 {education.map((item, i) => (
-                    <div key={i} className="grid grid-cols-[120px_1fr] gap-x-4 text-sm">
-                        <span className="text-gray-400 pt-0.5">{item.period}</span>
+                    <div key={i} className="grid grid-cols-[160px_1fr] gap-x-4 text-sm">
+                        <span className="text-gray-400 pt-0.5 whitespace-nowrap">{item.period}</span>
                         <div>
                             <p>{item.degree}</p>
                             <p className="text-gray-400">{item.location}</p>
