@@ -1,8 +1,13 @@
 import { useState, useEffect } from 'react'
 
+interface Caption {
+    title: string
+    bullets: string[]
+}
+
 interface Props {
     images: string[]
-    captions?: string[]
+    captions?: Caption[]
 }
 
 export default function ImageGallery({ images, captions = [] }: Props) {
@@ -31,7 +36,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                         onClick={() => setIndex(i)}
                         className="w-24 h-16 rounded bg-gray-200 flex-shrink-0 overflow-hidden hover:opacity-80 transition-opacity cursor-zoom-in"
                     >
-                        <img src={src} alt="" className="w-full h-full object-fill" />
+                        <img src={src} alt="" className="w-full h-full object-contain" />
                     </button>
                 ))}
             </div>
@@ -76,7 +81,14 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                                 ✕
                             </button>
                             {captions[index] && (
-                                <p className="mt-4 text-gray-700">{captions[index]}</p>
+                                <div className="mt-4 overflow-y-auto">
+                                    <h3 className="font-semibold text-base mb-2">{captions[index].title}</h3>
+                                    <ul className="list-disc list-inside space-y-1 text-sm text-gray-700">
+                                        {captions[index].bullets.map((item, i) => (
+                                            <li key={i}>{item}</li>
+                                        ))}
+                                    </ul>
+                                </div>
                             )}
                             {hasMany && (
                                 <p className="mt-auto text-gray-400 text-xs">{index + 1} / {images.length}</p>
