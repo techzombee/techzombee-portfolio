@@ -63,7 +63,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                             <img
                                 src={images[index]}
                                 alt=""
-                                className="absolute inset-0 w-full h-full object-fill"
+                                className="absolute inset-0 w-full h-full object-contain"
                             />
                         </div>
 
