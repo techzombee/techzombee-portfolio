@@ -31,7 +31,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                         onClick={() => setIndex(i)}
                         className="w-24 h-16 rounded bg-gray-200 flex-shrink-0 overflow-hidden hover:opacity-80 transition-opacity cursor-zoom-in"
                     >
-                        <img src={src} alt="" className="w-full h-full object-cover" />
+                        <img src={src} alt="" className="w-full h-full object-fill" />
                     </button>
                 ))}
             </div>
@@ -63,7 +63,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                             <img
                                 src={images[index]}
                                 alt=""
-                                className="absolute inset-0 w-full h-full object-cover"
+                                className="absolute inset-0 w-full h-full object-fill"
                             />
                         </div>
 
