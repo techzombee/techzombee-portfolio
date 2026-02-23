@@ -38,11 +38,11 @@ export default function ImageGallery({ images, captions = [] }: Props) {
 
             {index !== null && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center bg-black/80"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
                     onClick={() => setIndex(null)}
                 >
-                    {/* Prev arrow — in dark overlay area */}
-                    <div className="w-8 sm:w-16 flex-shrink-0 flex justify-center">
+                    {/* Prev arrow column — always present to keep card centered */}
+                    <div className="w-10 sm:w-16 flex-shrink-0 flex justify-center">
                         {index > 0 && (
                             <button
                                 onClick={e => { e.stopPropagation(); setIndex(index - 1) }}
@@ -55,7 +55,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
 
                     {/* Card */}
                     <div
-                        className="flex flex-1 h-[85vh] max-w-5xl rounded-xl overflow-hidden shadow-2xl"
+                        className="flex flex-1 max-w-5xl h-[85vh] rounded-xl overflow-hidden shadow-2xl"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Image */}
@@ -84,8 +84,8 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                         </div>
                     </div>
 
-                    {/* Next arrow — in dark overlay area */}
-                    <div className="w-8 sm:w-16 flex-shrink-0 flex justify-center">
+                    {/* Next arrow column — always present to keep card centered */}
+                    <div className="w-10 sm:w-16 flex-shrink-0 flex justify-center">
                         {index < images.length - 1 && (
                             <button
                                 onClick={e => { e.stopPropagation(); setIndex(index + 1) }}
