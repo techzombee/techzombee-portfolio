@@ -46,7 +46,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                         {index > 0 && (
                             <button
                                 onClick={e => { e.stopPropagation(); setIndex(index - 1) }}
-                                className="text-white text-5xl hover:opacity-60 transition-opacity"
+                                className="text-white text-5xl active:opacity-60 transition-opacity"
                             >
                                 ‹
                             </button>
@@ -89,7 +89,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                         {index < images.length - 1 && (
                             <button
                                 onClick={e => { e.stopPropagation(); setIndex(index + 1) }}
-                                className="text-white text-5xl hover:opacity-60 transition-opacity"
+                                className="text-white text-5xl active:opacity-60 transition-opacity"
                             >
                                 ›
                             </button>
