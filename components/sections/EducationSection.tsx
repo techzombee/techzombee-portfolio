@@ -12,7 +12,7 @@ const education = [
         degree: "M.S. in Information and Communication Technology (Top of Class) · Ajou University",
         thesis: {
             title: "Strength Training Intensity Measurement System Based on Skin Temperature — Smart Sportswear & Machine Learning",
-            url: "https://dcoll.ajou.ac.kr/dcollection/srch/srchDetail/000000030731",
+            url: "https://dcoll.ajou.ac.kr/dcollection/srch/srchDetail/000000030731?localeParam=en",
         },
         location: 'Suwon, South Korea',
         images: ['/education/transcript_ajou.png'],
