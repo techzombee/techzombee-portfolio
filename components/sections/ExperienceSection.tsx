@@ -18,6 +18,7 @@ const experiences = [
             '/career/consentPersonInfo_eng.png',
             '/career/signGovMortgage_eng.png',
         ],
+        captions: ['test1', '', ''],
     },
     {
         period: 'Jan 2017 — Feb 2021',
@@ -54,7 +55,7 @@ export default function ExperienceSection() {
                                 <sup className="text-gray-400">↗</sup>
                             </a>
                             <p className="text-gray-400">{item.location}</p>
-                            <ImageGallery images={item.images} />
+                            <ImageGallery images={item.images} captions={item.captions} />
                         </div>
                     </div>
                 ))}

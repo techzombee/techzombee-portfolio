@@ -2,19 +2,23 @@ import { useState, useEffect } from 'react'
 
 interface Props {
     images: string[]
+    captions?: string[]
 }
 
-export default function ImageGallery({ images }: Props) {
-    const [lightbox, setLightbox] = useState<string | null>(null)
+export default function ImageGallery({ images, captions = [] }: Props) {
+    const [index, setIndex] = useState<number | null>(null)
+    const hasMany = images.length > 1
 
     useEffect(() => {
-        if (!lightbox) return
-        const handleKey = (e: KeyboardEvent) => {
-            if (e.key === 'Escape') setLightbox(null)
+        if (index === null) return
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setIndex(null)
+            if (e.key === 'ArrowLeft') setIndex(i => (i !== null && i > 0 ? i - 1 : i))
+            if (e.key === 'ArrowRight') setIndex(i => (i !== null && i < images.length - 1 ? i + 1 : i))
         }
-        window.addEventListener('keydown', handleKey)
-        return () => window.removeEventListener('keydown', handleKey)
-    }, [lightbox])
+        window.addEventListener('keydown', onKey)
+        return () => window.removeEventListener('keydown', onKey)
+    }, [index, images.length])
 
     if (images.length === 0) return null
 
@@ -24,7 +28,7 @@ export default function ImageGallery({ images }: Props) {
                 {images.map((src, i) => (
                     <button
                         key={i}
-                        onClick={() => setLightbox(src)}
+                        onClick={() => setIndex(i)}
                         className="w-24 h-16 rounded bg-gray-200 flex-shrink-0 overflow-hidden hover:opacity-80 transition-opacity cursor-zoom-in"
                     >
                         <img src={src} alt="" className="w-full h-full object-cover" />
@@ -32,17 +36,65 @@ export default function ImageGallery({ images }: Props) {
                 ))}
             </div>
 
-            {lightbox && (
+            {index !== null && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-                    onClick={() => setLightbox(null)}
+                    className="fixed inset-0 z-50 flex items-center bg-black/80"
+                    onClick={() => setIndex(null)}
                 >
-                    <img
-                        src={lightbox}
-                        alt=""
-                        className="max-w-[90vw] max-h-[90vh] object-contain rounded shadow-xl"
-                        onClick={(e) => e.stopPropagation()}
-                    />
+                    {/* Prev arrow — in dark overlay area */}
+                    <div className="w-8 sm:w-16 flex-shrink-0 flex justify-center">
+                        {index > 0 && (
+                            <button
+                                onClick={e => { e.stopPropagation(); setIndex(index - 1) }}
+                                className="text-white text-5xl hover:opacity-60 transition-opacity"
+                            >
+                                ‹
+                            </button>
+                        )}
+                    </div>
+
+                    {/* Card */}
+                    <div
+                        className="flex flex-1 h-[85vh] max-w-5xl rounded-xl overflow-hidden shadow-2xl"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        {/* Image */}
+                        <div className="relative flex-1 bg-black">
+                            <img
+                                src={images[index]}
+                                alt=""
+                                className="absolute inset-0 w-full h-full object-cover"
+                            />
+                        </div>
+
+                        {/* Info panel */}
+                        <div className="w-1/3 bg-white border-l border-gray-200 flex flex-col p-4 text-sm">
+                            <button
+                                onClick={() => setIndex(null)}
+                                className="self-end text-gray-400 hover:text-gray-700 transition-colors text-lg leading-none"
+                            >
+                                ✕
+                            </button>
+                            {captions[index] && (
+                                <p className="mt-4 text-gray-700">{captions[index]}</p>
+                            )}
+                            {hasMany && (
+                                <p className="mt-auto text-gray-400 text-xs">{index + 1} / {images.length}</p>
+                            )}
+                        </div>
+                    </div>
+
+                    {/* Next arrow — in dark overlay area */}
+                    <div className="w-8 sm:w-16 flex-shrink-0 flex justify-center">
+                        {index < images.length - 1 && (
+                            <button
+                                onClick={e => { e.stopPropagation(); setIndex(index + 1) }}
+                                className="text-white text-5xl hover:opacity-60 transition-opacity"
+                            >
+                                ›
+                            </button>
+                        )}
+                    </div>
                 </div>
             )}
         </>
