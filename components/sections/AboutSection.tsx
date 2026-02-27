@@ -1,6 +1,6 @@
 const bullets = [
     'Software Engineer (iOS & Full-Stack)',
-    'Production banking systems experience',
+    'Production banking systems & e-commerce platforms',
     'System design & scalable backend development',
     'AI automation builder',
 ]
