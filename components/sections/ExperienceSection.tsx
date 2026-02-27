@@ -84,7 +84,43 @@ const experiences = [
         period: 'Jan 2017 — Feb 2021',
         title: 'Software Engineer, Full-Stack · Awesome Company',
         location: 'Seoul, South Korea',
-        images: [],
+        images: [
+            '/career/awesomecompany_web_main_en.png',
+            '/career/awesomecompany_web_admin_en.png',
+            '/career/awesomecompany_app_main_en.png',
+        ],
+        captions: [
+            {
+                title: "Web – Main Shop Page",
+                bullets: [
+                    "Built the main shopping page using React with Redux state management",
+                    "Developed RESTful product and banner APIs using Spring Boot",
+                    "Implemented JWT-based authentication and persistent login sessions",
+                    "Designed dynamic product grid with real-time cart count synchronization",
+                    "Optimized performance with lazy loading and AWS S3 image delivery",
+                ],
+            },
+            {
+                title: "Web – Admin Dashboard",
+                bullets: [
+                    "Developed admin dashboard with Role-Based Access Control (RBAC)",
+                    "Implemented product and order CRUD APIs using Spring Boot and JPA",
+                    "Designed relational database schema for products, users, and orders",
+                    "Built sales analytics and order status management features",
+                    "Deployed backend services on AWS EC2 with RDS integration",
+                ],
+            },
+            {
+                title: "Mobile App – iOS / Hybrid Integration",
+                bullets: [
+                    "Designed and implemented RESTful APIs to support seamless mobile integration with the Spring Boot backend",
+                    "Implemented JWT-based authentication and secure HTTPS communication for protected mobile sessions",
+                    "Developed dynamic two-column product grid with real-time search and keyword filtering",
+                    "Built synchronized cart management system across web and mobile platforms with backend validation",
+                    "Optimized API response payloads and network performance to enhance mobile user experience",
+                ],
+            },
+        ],
     },
     {
         period: 'Jan 2013 — Dec 2016',
