@@ -90,7 +90,54 @@ const experiences = [
         period: 'Jan 2013 — Dec 2016',
         title: 'Software Engineer, Full-Stack · Blue Korea',
         location: 'Seoul, South Korea',
-        images: [],
+        images: [
+            '/career/bluekorea_web_main_en.png',
+            '/career/bluekorea_web_shop_en.png',
+            '/career/bluekorea_web_admin_en.png',
+            '/career/bluekorea_app_main_en.png',
+        ],
+        captions: [
+            {
+                title: "Main Page",
+                bullets: [
+                    "Developed the main landing page using Spring MVC and JSP",
+                    "Implemented dynamic content rendering with AngularJS for interactive components",
+                    "Integrated banner and featured product APIs through a controller-service architecture",
+                    "Applied session-based user state management for personalized content delivery",
+                    "Optimized server response time by improving MyBatis query performance",
+                ],
+            },
+            {
+                title: "Shopping Page – Product List & Detail",
+                bullets: [
+                    "Designed product listing and detail pages using AngularJS and Bootstrap UI components",
+                    "Implemented filtering, sorting, and pagination backed by MyBatis queries",
+                    "Built cart and order processing logic within the Spring service layer",
+                    "Managed transactional order handling using Spring's declarative transaction management",
+                    "Designed relational schemas for product, order, and user domains in Oracle DB",
+                ],
+            },
+            {
+                title: "Admin Page",
+                bullets: [
+                    "Developed an admin dashboard for product and order management using Spring MVC",
+                    "Implemented full CRUD functionality through MyBatis mapper configuration",
+                    "Applied Role-Based Access Control (RBAC) using session and interceptor mechanisms",
+                    "Created reporting views for sales statistics using aggregated SQL queries",
+                    "Improved batch data processing performance through query optimization",
+                ],
+            },
+            {
+                title: "Mobile Integration – Hybrid App Support",
+                bullets: [
+                    "Designed RESTful APIs to support hybrid mobile application integration",
+                    "Implemented JSON-based communication between the web server and mobile client",
+                    "Developed authentication APIs for secure mobile login sessions",
+                    "Optimized API response payload size to enhance mobile performance",
+                    "Deployed and monitored server logs to handle mobile traffic efficiently",
+                ],
+            },
+        ],
     },
 ]
 
