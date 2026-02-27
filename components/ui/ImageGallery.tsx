@@ -29,7 +29,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
 
     return (
         <>
-            <div className="flex gap-2 mt-3">
+            <div className="flex flex-wrap gap-2 mt-3">
                 {images.map((src, i) => (
                     <button
                         key={i}
