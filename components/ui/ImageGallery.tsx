@@ -60,11 +60,11 @@ export default function ImageGallery({ images, captions = [] }: Props) {
 
                     {/* Card */}
                     <div
-                        className="flex flex-1 max-w-5xl h-[85vh] rounded-xl overflow-hidden shadow-2xl"
+                        className="flex flex-col sm:flex-row flex-1 max-w-5xl h-[85vh] rounded-xl overflow-hidden shadow-2xl"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Image */}
-                        <div className="relative flex-1 bg-black">
+                        <div className="relative h-1/2 sm:h-auto sm:flex-1 bg-black">
                             <img
                                 src={images[index]}
                                 alt=""
@@ -73,7 +73,7 @@ export default function ImageGallery({ images, captions = [] }: Props) {
                         </div>
 
                         {/* Info panel */}
-                        <div className="w-1/3 bg-white border-l border-gray-200 flex flex-col p-4 text-sm">
+                        <div className="sm:w-1/3 bg-white border-t sm:border-t-0 sm:border-l border-gray-200 flex flex-col p-4 text-sm overflow-y-auto">
                             <button
                                 onClick={() => setIndex(null)}
                                 className="self-end text-gray-400 hover:text-gray-700 transition-colors text-lg leading-none"
