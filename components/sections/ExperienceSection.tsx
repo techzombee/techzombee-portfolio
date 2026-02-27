@@ -4,6 +4,7 @@ const experiences = [
     {
         period: 'Nov 2021 — Present',
         title: 'Software Engineer, iOS · Kookmin Bank',
+        href: 'https://en.wikipedia.org/wiki/Kookmin_Bank',
         location: 'Seoul, South Korea',
         images: [
             '/career/starbanking_appstore.jpeg',
@@ -44,6 +45,7 @@ const experiences = [
     {
         period: 'Mar 2021 — Oct 2021',
         title: 'Software Engineer, Full-Stack · Kookmin Bank',
+        href: 'https://en.wikipedia.org/wiki/Kookmin_Bank',
         location: 'Seoul, South Korea',
         images: [
             '/career/inqAllAccounts_eng.png',
@@ -186,7 +188,12 @@ export default function ExperienceSection() {
                     <div key={i} className="grid grid-cols gap-x-4 text-sm">
                         <span className="text-gray-400 pt-0.5 whitespace-nowrap">{item.period}</span>
                         <div>
-                            <p>{item.title}</p>
+                            <p>
+                                {item.href ? (() => {
+                                    const [role, company] = item.title.split(' · ')
+                                    return <>{role} · <a href={item.href} target="_blank" rel="noopener noreferrer" className="hover:underline">{company} <sup className="text-gray-400">↗</sup></a></>
+                                })() : item.title}
+                            </p>
                             <p className="text-gray-400">{item.location}</p>
                             <ImageGallery images={item.images} captions={item.captions} />
                         </div>
