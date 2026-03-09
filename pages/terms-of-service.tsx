@@ -4,15 +4,15 @@ export default function TermsAndConditions() {
   return (
     <>
       <Head>
-        <title>Terms and Conditions - Techzombee</title>
-        <meta name="description" content="Review the terms and conditions for using Techzombee services." />
+        <title>Terms and Conditions - Heechan Cho</title>
+        <meta name="description" content="Review the terms and conditions for using Heechan Cho services." />
       </Head>
       <div className="p-6 max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">Terms and Conditions</h1>
         <p className="mb-4">Last updated: May 29, 2025</p>
 
         <p className="mb-4">
-          Welcome to Techzombee. These terms and conditions outline the rules and regulations for the use of our website and services.
+          Welcome to Heechan Cho. These terms and conditions outline the rules and regulations for the use of our website and services.
         </p>
 
         <h2 className="text-xl font-semibold mt-6 mb-2">1. Acceptance of Terms</h2>
@@ -22,7 +22,7 @@ export default function TermsAndConditions() {
 
         <h2 className="text-xl font-semibold mt-6 mb-2">2. Intellectual Property</h2>
         <p className="mb-4">
-          All content and materials on Techzombee are owned by us and protected by applicable copyright and trademark law.
+          All content and materials on Heechan Cho are owned by us and protected by applicable copyright and trademark law.
         </p>
 
         <h2 className="text-xl font-semibold mt-6 mb-2">3. Use Restrictions</h2>

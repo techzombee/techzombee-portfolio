@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t py-6 text-center text-sm text-gray-500">
-      © {new Date().getFullYear()} <strong className="text-gray-600">TechZombee</strong>. Built with ❤️ by HEECHAN.
+      © {new Date().getFullYear()} <strong className="text-gray-600">Heechan Cho</strong>. Built with ❤️.
     </footer>
   );
 }
